@@ -1,0 +1,248 @@
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+* {
+	box-sizing: border-box;
+}
+
+/* ----------------------------------------
+Typography
+------------------------------------------- */
+body {
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	color: #808080;
+	margin: 0;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+	color: #44545E; 
+	padding: 5px 15px;
+	font-size: 18px;
+}
+
+p {
+	text-transform: none;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+h1 {
+	font-size: 37px;
+	letter-spacing: 10px;
+}
+
+h2 { font-size: 23px;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+header p {
+	font-size: 23px;
+	margin: 0;
+}
+
+footer a {
+	font-size: 30px;
+}
+/* ----------------------------------------
+Lists
+------------------------------------------- */
+ul {
+	padding: 35px 0;
+	width: 100%;
+}
+
+ul li {
+	display: inline;
+}
+
+/* ----------------------------------------
+Layout
+------------------------------------------- */
+nav {
+	width: 100%;
+	padding: 25px 50px;
+	margin: 0 auto;
+	top: 0;
+	background-color: white;
+	opacity: .80;
+	position: fixed;
+	text-align: right;
+}
+
+nav a {
+	color: #808080;
+	padding: 0 10px;
+	font-size: 16px;
+	-webkit-transition: 1s;
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+
+nav a:hover {
+	-webkit-transition: 1s;
+	background-color: #7B98AA;
+	color: white;
+}
+
+
+.archive {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding: 10px 25px;
+	height: 100vh;
+}
+
+.archive p {
+	padding: 0px 25px;
+	margin-bottom: 50px;
+}
+
+#about {
+	background-color: #D9E0E6;
+	padding: 5% 30%;
+	margin: 50px auto;
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	padding: 0px 20px;
+	width: 100%
+	margin: 0 auto;
+}
+
+.bio {
+	max-width: 360px;
+	margin: 5px 10px;
+	text-align: center;
+}
+
+.bio img {
+	max-width: 100%;
+    margin: 40px 0;
+    transition: transform .2s
+}
+
+article a {
+	border: solid 2px #fff;
+	-webkit-transition: 1s;
+}
+
+article a:hover {
+	color: white;
+	background-color: #fff;
+   -webkit-transition: 1s;
+}
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
+header {
+	background-image: url("../images/home_header_bg.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin: 0 auto 150px auto;
+	color: white;
+
+}
+
+/* ----------------------------------------
+Buttons
+------------------------------------------- */
+button {
+	background-color: #fff;
+	border: 1px solid #fff;
+	text-transform: uppercase;
+	padding: 5px 15px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	color: #fff;
+	-webkit-transition: 1s;
+}
+
+button:hover {
+	color: white;
+	background-color: #fff;
+	-webkit-transition: 1s;
+
+}
+
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+footer {
+	background-color: #D9E0E6;
+	padding: 5px 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+footer a {
+	-webkit-transition: 1s;
+}
+
+footer a:hover {
+	color: white;
+	background-color: #fff;
+	-webkit-transition: 1s;
+}
+
+hr {
+	border: 1px solid #fff;
+	margin-top: 30px;
+}
+
+input {
+	text-align: center;
+	padding: 5px 25px;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	color: #fff;
+}
+
+::-webkit-input-placeholder {
+   color: #D9E0E6;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #D9E0E6;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #D9E0E6;  
+}
+
+:-ms-input-placeholder {  
+   color: #D9E0E6;  
+}
