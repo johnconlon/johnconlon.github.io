@@ -14,9 +14,9 @@ $(window).on('scroll', function () {
 		}
 });
 
-$('.up-arrow').on('click', function () {
-    $('up-arrow i').attr('href', 'www.google.com');   
-});
+// $('.up-arrow').on('click', function () {
+//     $('up-arrow i').attr('href', 'www.google.com');   
+// });
 
 // when the use scrolls past the main header image
 	// collapse the menu to left

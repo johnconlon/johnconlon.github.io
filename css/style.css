@@ -100,7 +100,7 @@ nav a:hover {
 Header
 ------------------------------------------- */
 header {
-	background-image: url("../images/home-header-bg.jpg");
+/* 	background-image: url("../images/home-header-bg.jpg"); */
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -120,7 +120,18 @@ header {
 	        flex-direction: column;
 	margin: 0 auto 25px auto;
 	color: white;
+	animation: heroimage 30s linear infinite;
+	transition: all .3s ease-in-out;
 
+}
+
+@keyframes heroimage {
+	0%, 100% {
+		background-image: url("../images/home-header-bg.jpg");
+	}
+	50% {
+		background-image: url("../images/point-reyes-beach.jpg");
+	}
 }
 
 /* ----------------------------------------
@@ -243,6 +254,10 @@ button:hover {
 	position: fixed;
 	bottom: 50%;
 	right: 3%;
+	color: white;
+	border: 2px solid white;
+	border-radius: 100px;
+	padding: 10px;
 }
 
 .active {
