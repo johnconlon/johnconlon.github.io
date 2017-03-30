@@ -207,7 +207,7 @@ About
 	display: flex;
 	justify-content: space-around;
 	padding: 0px 20px;
-	width: 100%
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -359,7 +359,9 @@ Place your media queries here!
 	
 	.bio {
 		max-width: 100%;
+		margin-bottom: 0;
 	}
+
 	#about div {
 		width: 100%;
 	}
