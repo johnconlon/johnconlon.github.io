@@ -51,14 +51,15 @@ h3 {
 	color: white;
 }
 
+h4 {
+	font-size: 2em;
+}
+
 header p {
 	font-size: 23px;
 	margin: 0;
 }
 
-footer a {
-	font-size: 30px;
-}
 /* ----------------------------------------
 Lists
 ------------------------------------------- */
@@ -80,6 +81,8 @@ nav {
 	margin: 0 auto;
 	top: 0;
 	text-align: right;
+	display: inline-block;
+	position: absolute;
 }
 
 nav a {
@@ -100,7 +103,7 @@ nav a:hover {
 Header
 ------------------------------------------- */
 header {
-/* 	background-image: url("../images/home-header-bg.jpg"); */
+	background-image: url("../images/home-header-bg.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -122,17 +125,18 @@ header {
 	color: white;
 	animation: heroimage 30s linear infinite;
 	transition: all .3s ease-in-out;
+	position: relative;
 
 }
 
-@keyframes heroimage {
+/* @keyframes heroimage {
 	0%, 100% {
 		background-image: url("../images/home-header-bg.jpg");
 	}
 	50% {
 		background-image: url("../images/point-reyes-beach.jpg");
 	}
-}
+} */
 
 /* ----------------------------------------
 Latest Articles
@@ -198,8 +202,7 @@ About
 
 #about {
 	background-color: #D9E0E6;
-	padding: 5% 30%;
-	margin: 50px auto;
+	margin-top: 50px auto;
 	height: 100vh;
 	display: flex;
 	justify-content: space-around;
@@ -212,6 +215,7 @@ About
 	max-width: 360px;
 	margin: 5px 10px;
 	text-align: center;
+	overflow: hidden;
 }
 
 .bio img {
@@ -260,6 +264,15 @@ button:hover {
 	padding: 10px;
 }
 
+.down-arrow i {
+	color: white;
+	border: 2px solid white;
+	border-radius: 100px;
+	padding: 10px;
+	color: white;
+	margin-top: 2em;
+}
+
 .active {
 	display: block;
 }
@@ -268,14 +281,20 @@ button:hover {
 Footer
 ------------------------------------------- */
 footer {
+	background-image: url("../images/forest_bg.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 	background-color: #D9E0E6;
-	padding: 5px 0;
+	padding: 35px 0;
 	font-family: 'Raleway', sans-serif;
 }
 
 footer a {
 	-webkit-transition: 1s;
+	font-size: 30px;
 }
+
 
 footer a:hover {
 	color: white;
@@ -311,4 +330,63 @@ input {
 
 :-ms-input-placeholder {  
    color: #D9E0E6;  
+}
+
+/* ----------------------------------------
+Place your media queries here!
+------------------------------------------- */
+
+@media screen and (max-width: 1050px) {
+	
+	nav {
+		display: none;
+	}
+
+	article {
+		width: 100%;
+		padding: 10%, 25%;
+	}
+
+	.latest {
+		display: block;
+		height: auto;
+	}
+	
+	#about {
+		display: block;
+		height: auto;
+	}
+	
+	.bio {
+		max-width: 100%;
+	}
+	#about div {
+		width: 100%;
+	}
+
+/* 	ul {
+		display: none;	
+	}
+	
+	.hamburger {
+		display: block;
+		text-align: left;
+
+	}
+	.grid-wrapper article {
+		width: 100%;
+	}
+
+	.articles button {
+		margin-bottom: 20px;
+		margin-top: 0px	
+	}
+
+	.articles p {
+		padding: 0 30px;
+	}
+
+	.articles h3 {
+		margin-bottom: 20px;
+	} */
 }

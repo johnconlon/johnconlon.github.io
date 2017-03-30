@@ -30,7 +30,7 @@ $(window).on('scroll', function () {
 // Smooth scroll this mother!
 
 // Do it when someone clicks a nav link
-$('nav a').on('click', function(e) {
+$('nav a, .up-arrow a, .down-arrow a').on('click', function(e) {
   // prevent the standard link operation on click
   e.preventDefault();
   // use the href of the link to identify what
