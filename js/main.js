@@ -8,9 +8,11 @@ $(window).on('scroll', function () {
 
 	if (distanceScrolled >= 1450) {
 			$('.up-arrow').addClass('active');
+			$(".hamburger").css("color", "black");
 		}
 	else {
 			$('.up-arrow').removeClass('active');
+			$(".hamburger").css("color", "white");
 		}
 });
 
@@ -44,3 +46,22 @@ $('nav a, .up-arrow a, .down-arrow a').on('click', function(e) {
     scrollTop: targetOffset
   }, 600);
 });
+
+$('.hamburger').on('click', function (event) {
+    event.preventDefault();
+    $('#nav a').toggleClass('mobile-nav');
+});
+
+$("#menu-button").click(function(){
+  $(this).toggleClass("active");
+  $("#line-1").toggleClass("active");
+  $("#line-2").toggleClass("active");
+  $("#line-3").toggleClass("active");
+  $("nav").addClass("menu");
+  $("#menu").slideToggle("slow");
+});
+
+// $('.hamburger').on('click', function () {
+//     $('.sidebar').toggleClass('active');
+//     $('.content').addClass('shift');   
+// });

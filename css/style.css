@@ -99,6 +99,21 @@ nav a:hover {
 	color: white;
 }
 
+.mobile-nav {
+	display: block;
+	text-align: left;
+	position: fixed;
+}
+
+.hamburger {
+	display: none;
+	text-align: left;
+	color: #ffffff;
+	font-size: 20px;
+	margin: 10px 0;
+	z-index: 12;
+}
+
 /* ----------------------------------------
 Header
 ------------------------------------------- */
@@ -333,13 +348,78 @@ input {
 }
 
 /* ----------------------------------------
+Test Nav
+------------------------------------------- */
+
+
+#menu-button{
+  width: 2em;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: all linear .3s;
+  padding: 4px;
+  z-index: 1;
+}
+
+#menu-button.active{
+  background: #3d3d3d;
+}
+#line-1,#line-2,#line-3{
+  width: 90%;
+  background: #fff;
+  height: 3px;
+  margin: 4px auto;
+  transition: all linear .3s;
+}
+
+#line-1.active{
+-webkit-transform: translate(0px,12px) rotate(45deg);
+transform: translate(0px,12px) rotate(45deg);
+}
+
+#line-2.active{
+opacity: 0;
+}
+
+#line-3.active{
+-webkit-transform: translate(0px, -12px) rotate(-45deg);
+transform: translate(0px, -12px) rotate(-45deg);
+}
+
+#menu{
+  background: #3d3d3d;
+  width: 150px;
+  padding: 10px;
+  padding-top: 30px;
+  color: #fff;
+  font-family: arial;
+  font-size: 1.5rem;
+  display: none;
+  position: absolute;
+  top: 8px;
+  border-radius: 5px;
+}
+
+#menu ul{
+  list-style: none;
+}
+
+#menu ul li{
+  margin: 8px 0;
+}
+
+
+/* ----------------------------------------
 Place your media queries here!
 ------------------------------------------- */
 
 @media screen and (max-width: 1050px) {
 	
-	nav {
-		display: none;
+	nav a {
+		display: block;
+		text-align: left;
+		padding: 50px, 0;
 	}
 
 	article {
@@ -366,6 +446,17 @@ Place your media queries here!
 		width: 100%;
 	}
 
+	.hamburger {
+		display: block;
+		text-align: left;
+		position: fixed;
+	}
+
+@media screen and (max-width: 500px) {
+
+	.latest p, .latest a, h2 {
+		display: none;
+	}
 /* 	ul {
 		display: none;	
 	}
