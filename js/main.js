@@ -1,5 +1,4 @@
-// Make it rain!
-// Add thing that tells you how far you've scrolled form the top
+
 $(window).on('scroll', function () {
 	// Step 1: Google $(window).scrollTop();
 	var distanceScrolled = $(window).scrollTop();
@@ -16,20 +15,7 @@ $(window).on('scroll', function () {
 		}
 });
 
-// $('.up-arrow').on('click', function () {
-//     $('up-arrow i').attr('href', 'www.google.com');   
-// });
 
-// when the use scrolls past the main header image
-	// collapse the menu to left
-	// turn into hamburger 
-	// arrow up button appears on side of the screen to you to the top
-
-
-// 
-
-
-// Smooth scroll this mother!
 
 // Do it when someone clicks a nav link
 $('nav a, .up-arrow a, .down-arrow a').on('click', function(e) {
@@ -47,21 +33,16 @@ $('nav a, .up-arrow a, .down-arrow a').on('click', function(e) {
   }, 600);
 });
 
-$('.hamburger').on('click', function (event) {
+
+$(".hamburger").on('click', function (event) {
+	event.preventDefault();
+    $('nav').addClass('mobile-nav');
+    $('.hamburger').addClass('close');	  
+});
+
+$(".hamburger close").on('click', function (event) {
     event.preventDefault();
-    $('#nav a').toggleClass('mobile-nav');
+    $('.hamburger').removeClass('close');
+    $('nav').removeClass('mobile-nav');
+    $('nav').addClass('mobile-close');
 });
-
-$("#menu-button").click(function(){
-  $(this).toggleClass("active");
-  $("#line-1").toggleClass("active");
-  $("#line-2").toggleClass("active");
-  $("#line-3").toggleClass("active");
-  $("nav").addClass("menu");
-  $("#menu").slideToggle("slow");
-});
-
-// $('.hamburger').on('click', function () {
-//     $('.sidebar').toggleClass('active');
-//     $('.content').addClass('shift');   
-// });
