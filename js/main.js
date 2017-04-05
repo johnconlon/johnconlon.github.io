@@ -3,7 +3,7 @@ $(window).on('scroll', function () {
 	// Step 1: Google $(window).scrollTop();
 	var distanceScrolled = $(window).scrollTop();
 
-	console.log('The distance scrolled is: ' + distanceScrolled);
+	// console.log('The distance scrolled is: ' + distanceScrolled);
 
 	if (distanceScrolled >= 1450) {
 			$('.up-arrow').addClass('active');
@@ -36,13 +36,27 @@ $('nav a, .up-arrow a, .down-arrow a').on('click', function(e) {
 
 $(".hamburger").on('click', function (event) {
 	event.preventDefault();
-    $('nav').addClass('mobile-nav');
-    $('.hamburger').addClass('close');	  
+    $('nav').toggleClass('mobile-nav');
+    $('.hamburger').toggleClass('close');	  
 });
 
-$(".hamburger close").on('click', function (event) {
-    event.preventDefault();
-    $('.hamburger').removeClass('close');
-    $('nav').removeClass('mobile-nav');
-    $('nav').addClass('mobile-close');
-});
+// $(".hamburger close").on('click', function (event) {
+//     event.preventDefault();
+//     $('.hamburger').removeClass('close');
+//     $('nav').removeClass('mobile-nav');
+//     $('nav').addClass('mobile-close');
+// });
+
+// $(".hamburger").on('click', function (event) {
+// 	if $(".hamburger").hasClass('close') {
+// 		event.preventDefault();
+// 		$('nav').addClass('mobile-close');
+// 	} else {
+// 		event.preventDefault();
+// 	    $('nav').addClass('mobile-nav');
+// 	    $('.hamburger').addClass('close');
+// 	} 	  
+// });
+
+// if has class mobile nav removeclass mobile nav add class mobile close
+// else removeClass mobile-close add class 
