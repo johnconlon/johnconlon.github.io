@@ -28,17 +28,37 @@ $('nav a, .up-arrow a, .down-arrow a').on('click', function(e) {
   var targetOffset = $(thisTarget).offset().top;
   // use jQuery.animate() to animate the body's
   // scrollTop to the targetOffest
+  $('.down-arrow i').toggleClass('spin');
   $('body').animate({
     scrollTop: targetOffset
-  }, 600);
+  }, 1000);
 });
 
 
 $(".hamburger").on('click', function (event) {
 	event.preventDefault();
+	if  ($('nav').hasClass('mobile-nav')) {
+		$('nav').removeClass('mobile-nav');
+		$('nav').toggleClass('mobile-close');
+	} else if ($('nav').hasClass('mobile-close')) {
+		$('nav').removeClass('mobile-close');
+		$('nav').toggleClass('mobile-nav');
+	} else {
     $('nav').toggleClass('mobile-nav');
-    $('.hamburger').toggleClass('close');	  
+    }	  
 });
+
+// .('.up-arrow i, .down-arrow i').on('click', function (event) {
+// 	event.preventDefault();
+// 	(self).addClass('spin');
+
+// });
+
+// $(".mobil").on('click', function (event) {
+// 	event.preventDefault();
+//     $('nav').toggleClass('mobile-close');
+//     $('.hamburger').removeClass('close');	  
+// });
 
 // $(".hamburger close").on('click', function (event) {
 //     event.preventDefault();
